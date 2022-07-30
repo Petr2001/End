@@ -1,0 +1,38 @@
+@mixin template-link($col, $fs, $fsiz) {
+    color: $col;
+    font-size: $fsiz;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: $fs;
+    font-weight: 700; 
+}
+@mixin template-container-boxes {
+    width: 1000px;
+    height: 800px;
+    margin: 150px auto;
+    border: 2px solid;
+}
+@mixin template-boxes() {
+    width: 200px;
+    height: 200px;
+    border: 2px solid;
+    background-color: aqua;
+}
+@mixin template-container {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+@mixin template-text-box($fs, $color) {
+    font-size: $fs;
+    color: $color;
+}
+@mixin template-hover-link($col-hov, $size-hov) {
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    &:hover {
+        color: $col-hov;
+        font-size: $size-hov;
+    }
+
+}

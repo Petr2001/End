@@ -1,0 +1,70 @@
+@import "variables";
+@import "mixin";
+
+p {
+    margin: 0px
+}
+
+.container {
+    .string1 {
+        a {
+            @include template-link(red, italic, 20px);
+        }
+    }
+    .string2{
+        a {
+            @include template-link(green, none, 30px);
+        }
+    }
+    .string3{
+        a {
+            @include template-link(violet, italic, 40px);
+        }
+    }
+    .string4{
+        a {
+            @include template-link(pink, italic, 50px);
+        }
+    }
+}
+.container-boxes {
+    .link-hover {
+        @include template-hover-link (red, 50px);
+    }
+    .main_container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center
+    }
+    @include template-container-boxes();
+    .boxes_container {
+        @include template-container();
+        .box1 {
+            @include template-boxes();
+            .text-box {
+                @include template-text-box (10px, red);
+            }
+        }
+        .box2 {
+            @include template-boxes();
+            .text-box {
+                @include template-text-box (20px, green);
+            }
+        }
+        .box3 {
+            @include template-boxes();
+            .text-box {
+                @include template-text-box (30px, blue);
+            }
+        }
+        .box4 {
+            @include template-boxes();
+            .text-box {
+                @include template-text-box (35px, yellow);
+            }
+        }
+        
+    }
+
+}
